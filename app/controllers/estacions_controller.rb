@@ -18,6 +18,7 @@ class EstacionsController < ApplicationController
     @estacion = Estacion.new(estacion_params)
 
     if @estacion.save
+      StationsMailer.send_station.deliver
       render json: @estacion, status: :created, location: @estacion
     else
       render json: @estacion.errors, status: :unprocessable_entity
