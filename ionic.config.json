@@ -1,0 +1,7 @@
+{
+  "name": "all-process",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
